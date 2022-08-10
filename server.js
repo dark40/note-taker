@@ -4,7 +4,7 @@ const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 
 
-const port = 3001;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
@@ -65,6 +65,6 @@ app.get('*', (req, res) =>
 
 );
 
-app.listen(port, () =>
-    console.log(`App listening at http://localhost:${port} 🚀`)
+app.listen(PORT, () =>
+    console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
